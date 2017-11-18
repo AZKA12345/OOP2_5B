@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Aplikasi Perekaman Data Penulis</title>
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-select.min.css"/>
+  
+       
+        <!-- Theme style -->
+        <link rel="stylesheet" href="assets/css/AdminLTE.min.css"/>
+       
+        <!-- My Custom CSS -->
+        <link rel="stylesheet" href="assets/css/main.css"/>
+        <!-- jQuery 3 -->
+        <script src="assets/jquery/jquery.min.js"></script>
+        <script src="assets/jquery/jquery-ui.js"></script>
+</head>
+<body>
+<section class="content container-fluid">
+
+    <div class="col-md-11">
+      <div class="box box-info">
+          <div class="box-header with-border">
+            <h3 class="box-title">Update Data Penulis</h3>
+
+            <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+<form th:object="${mhs}"
+	th:action="@{/tambah-data}"
+	method="POST">
+
+	<div class="form-group">
+	<label>Id</label>
+    <input type="text" th:field="*{id}" class="form-control" readonly="true" />
+    </div>
+
+    <div class="form-group">
+    <label>Nama Buku</label>
+	<input type="text" class="form-control" th:field="*{nama}"/>
+	</div>
+
+	<div class="form-group">
+		<label>Judul Buku</label>
+		<input type="text" class="form-control" th:field="*{judul_buku}"/>
+	</div>
+	
+
+	 <div class="box-footer">
+                        <button type="submit" name="submit" class="btn btn-primary"><i class="glyphicon glyphicon-hdd"></i> Simpan</button>                       
+                        <a href="/daftar-penulis" class="btn btn-primary">Kembali</a>
+        </div>
+		
+	</form>
+		</div>
+          <!-- /.box-body -->
+      </div>
+      <!-- /.col -->
+    </div>
+     </section>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap-select.min.js"></script>
+
+
+<script src="assets/js/raphael-min.js"></script>
+<!-- AdminLTE App -->
+<script src="assets/js/adminlte.min.js"></script>
+</body>
+</html>
